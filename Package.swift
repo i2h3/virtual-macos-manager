@@ -4,23 +4,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftPackageTemplate",
+    name: "VirtualMacOSManager",
+    platforms: [
+        .macOS(.v13)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "SwiftPackageTemplate",
-            targets: ["SwiftPackageTemplate"]
+            name: "VirtualMacOSManager",
+            targets: ["VirtualMacOSManager"]
         ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "SwiftPackageTemplate"
-        ),
-        .testTarget(
-            name: "SwiftPackageTemplateTests",
-            dependencies: ["SwiftPackageTemplate"]
+            name: "VirtualMacOSManager"
         ),
     ]
 )
